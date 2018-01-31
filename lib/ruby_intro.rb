@@ -55,17 +55,18 @@ def sum_to_n? arr, n
   	if doesEqual
   		break
   	end
-  	
+
   end
 
   return doesEqual
-
 end
 
 # Part 2
 
 def hello(name)
-  # YOUR CODE HERE
+  str = "Hello, " + name
+
+  return str
 end
 
 def starts_with_consonant? s
