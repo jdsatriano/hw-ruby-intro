@@ -16,6 +16,7 @@ def sum arr
 
 	return total
   end
+
 end
 
 def max_2_sum arr
@@ -34,10 +35,31 @@ def max_2_sum arr
 
   	return sum
   end
+
 end
 
 def sum_to_n? arr, n
-  # YOUR CODE HERE
+  #sum each element to another and see if the sum equals n
+  doesEqual = false
+
+  (0..arr.length-2).step(1) do |i|
+  	(i+1..arr.length-1).step(1) do |j|
+  		if arr[i] + arr[j] == n
+  			doesEqual = true
+  			break
+  		else
+  			doesEqual = false
+  		end
+  	end
+
+  	if doesEqual
+  		break
+  	end
+  	
+  end
+
+  return doesEqual
+
 end
 
 # Part 2
