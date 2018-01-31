@@ -92,11 +92,26 @@ def starts_with_consonant? s
   else
   	return false
   end
-  
+
 end
 
 def binary_multiple_of_4? s
-  # YOUR CODE HERE
+  if not /[01]/.match(s)
+  	return false
+  end
+
+  #check for 0 case
+  if s == "0"
+  	return true
+  end
+
+  #regex, binary multiple of 4 i.e. any binary number ending in 00
+  if /^[10]*00$/.match(s)
+  	return true
+  else
+  	return false
+  end
+
 end
 
 # Part 3
@@ -104,3 +119,10 @@ end
 class BookInStock
 # YOUR CODE HERE
 end
+
+
+
+
+
+
+
