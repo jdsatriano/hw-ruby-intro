@@ -3,7 +3,21 @@
 # Part 1
 
 def sum arr
-  # YOUR CODE HERE
+  #if arr is empty return 0
+  if arr.length == 0
+  	return 0
+
+  else
+  	#add up total of arr
+  	total = 0
+
+  	for a in arr
+  		total += a
+  	end
+
+  	return total
+  end
+  
 end
 
 def max_2_sum arr
