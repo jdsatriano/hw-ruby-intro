@@ -6,7 +6,6 @@ def sum arr
   #if arr is empty return 0
   if arr.length == 0
   	return 0
-
   else
   	#add up total of arr
   	total = 0
@@ -15,13 +14,26 @@ def sum arr
   		total += a
   	end
 
-  	return total
+	return total
   end
-  
 end
 
 def max_2_sum arr
-  # YOUR CODE HERE
+  len = arr.length
+
+  #if length of arr = 0 return 0
+  if len == 0
+  	return 0
+  #if length of arr = 1 return only element 
+  elsif len == 1
+  	return arr[0]
+  else
+  	#sort and return sum of last elements
+  	arr = arr.sort
+  	sum = arr[len-1] + arr[len-2]
+
+  	return sum
+  end
 end
 
 def sum_to_n? arr, n
