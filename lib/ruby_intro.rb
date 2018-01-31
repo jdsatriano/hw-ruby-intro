@@ -70,7 +70,29 @@ def hello(name)
 end
 
 def starts_with_consonant? s
-  # YOUR CODE HERE
+  #force first char to uppercase
+  #check if it equal A, E, I, O or U
+  #return bool
+  if s.length == 0
+  	return false
+  end
+
+  if s[0].class != String
+  	return false
+  end
+
+  char = s[0].upcase
+
+  if not /[a-fA-f]/.match(char)
+  	return false
+  end
+
+  if not /[AEIOU]/.match(char)
+  	return true
+  else
+  	return false
+  end
+  
 end
 
 def binary_multiple_of_4? s
